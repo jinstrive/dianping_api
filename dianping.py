@@ -7,7 +7,7 @@ from functools import partial
 
 TIMEOUT = 5
 
-class DingPingAPI(object):
+class DianPingAPI(object):
 
     def __init__(self, app_key, app_secret):
         self.app_key = app_key
@@ -218,7 +218,7 @@ DPURL = {
 def test_api():
     app_key = 'your app key'
     app_secret = 'your app secret'
-    dpapi = DingPingAPI(app_key, app_secret)
+    dpapi = DianPingAPI(app_key, app_secret)
     dpapi.get_cities_with_businesses()
     dpapi.find_businesses(city='北京', limit=20, sort=7)
 
@@ -227,7 +227,7 @@ def test_api():
 if __name__ == '__main__':
     app_key = 'your app key'
     app_secret = 'your app secret'
-    dpapi = DingPingAPI(app_key, app_secret)
+    dpapi = DianPingAPI(app_key, app_secret)
     # dpapi.get_cities_with_businesses()
     rets = dpapi.find_businesses(city='北京')
     print rets
