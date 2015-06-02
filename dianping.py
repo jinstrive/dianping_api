@@ -220,14 +220,13 @@ def test_api():
     app_secret = 'your app secret'
     dpapi = DianPingAPI(app_key, app_secret)
     dpapi.get_cities_with_businesses()
-    dpapi.find_businesses(city='北京', limit=20, sort=7)
-
+    dpapi.find_businesses(city='北京', page=4, limit=40)
 
 
 if __name__ == '__main__':
-    app_key = 'your app key'
-    app_secret = 'your app secret'
+    app_key = '32031532'
+    app_secret = 'f9f6707d865047d19bd1006f36628a37'
     dpapi = DianPingAPI(app_key, app_secret)
     # dpapi.get_cities_with_businesses()
-    rets = dpapi.find_businesses(city='北京')
+    rets = dpapi.find_businesses(city='北京', limit=20, page=7)
     print rets
